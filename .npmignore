@@ -6,6 +6,7 @@ coverage/**
 
 npm-debug.log
 commitlint.config.js
+rollup.config.js
 *.test.js
 
 .DS_Store
