@@ -29,7 +29,7 @@
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "deploy": "npm run travis-deploy-once 'npm run semantic-release'",
     "gc": "commit",
-    "lint": "eslint --ext .js .",
+    "lint": "eslint --ext .js ./src",
     "prepare": "npm run build:prod",
     "semantic-release": "semantic-release",
     "test": "BABEL_ENV=test jest",
