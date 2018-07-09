@@ -9,41 +9,50 @@ import {
   terser,
 } from 'rollup-plugin-terser';
 
-const config = {
-  input: 'src/index.js',
+const plugins = [
+  globals(),
+  builtins(),
+  babel({ exclude: 'node_modules/**' }),
+  localResolve(),
+  resolve({
+    module: true,
+    jsnext: true,
+    main: true,
+    preferBuiltins: true,
+    browser: true,
+    modulesOnly: true,
+  }),
+  terser(),
+  commonjs(),
+  filesize(),
+];
+
+const createConfig = filename => ({
+  input: `src/${filename}.js`,
   output: [
     {
-      file: 'build/index.js',
+      file: `build/${filename}.js`,
       format: 'umd',
       name: 'example-rollup-library',
     },
     {
-      file: 'build/index.cjs.js',
+      file: `build/${filename}.cjs.js`,
       format: 'cjs',
       name: 'example-rollup-library',
     },
     {
-      file: 'build/index.esm.js',
+      file: `build/${filename}.esm.js`,
       format: 'es',
     },
   ],
-  plugins: [
-    globals(),
-    builtins(),
-    babel({ exclude: 'node_modules/**' }),
-    localResolve(),
-    resolve({
-      module: true,
-      jsnext: true,
-      main: true,
-      preferBuiltins: true,
-      browser: true,
-      modulesOnly: true,
-    }),
-    terser(),
-    commonjs(),
-    filesize(),
-  ],
-};
+  plugins,
+});
 
-export default config;
+const configs = [
+  'index',
+  'a',
+  'b',
+  'c',
+].map(filename => createConfig(filename));
+
+export default configs;
