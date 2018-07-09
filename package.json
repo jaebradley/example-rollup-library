@@ -1,5 +1,8 @@
 {
-  "name": "example-rollup-library",
+  "name": "@jaebradley/example-rollup-library",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0-development",
   "description": "Example NodeJS library bundled using rollup.js",
   "keywords": [
