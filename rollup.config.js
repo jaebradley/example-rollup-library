@@ -31,17 +31,17 @@ const createConfig = filename => ({
   input: `src/${filename}.js`,
   output: [
     {
-      file: `build/${filename}.js`,
+      file: `./${filename}.js`,
       format: 'umd',
       name: 'example-rollup-library',
     },
     {
-      file: `build/${filename}.cjs.js`,
+      file: `./${filename}.cjs.js`,
       format: 'cjs',
       name: 'example-rollup-library',
     },
     {
-      file: `build/${filename}.esm.js`,
+      file: `./${filename}.esm.js`,
       format: 'es',
     },
   ],

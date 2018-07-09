@@ -16,11 +16,8 @@
   "author": {
     "name": "jae.b.bradley@gmail.com"
   },
-  "files": [
-    "build"
-  ],
-  "main": "build/index.cjs.js",
-  "module": "build/index.esm.js",
+  "main": "index.cjs.js",
+  "module": "index.esm.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jaebradley/example-rollup-library.git"
@@ -38,7 +35,7 @@
     "test": "BABEL_ENV=test jest",
     "travis-deploy-once": "travis-deploy-once"
   },
-  "browser": "build/index.js",
+  "browser": "index.js",
   "jest": {
     "collectCoverage": true,
     "testEnvironment": "node",
