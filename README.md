@@ -7,3 +7,40 @@
 [![npm](https://img.shields.io/npm/v/example-rollup-library.svg)](https://www.npmjs.com/package/example-rollup-library)
 
 Example `rollup.js` library.
+
+## Install
+
+```bash
+npm install @jaebradley/example-rollup-library
+```
+
+## API
+
+Since this is an example library, there are three exported methods; `a`, `b`, and `c`. All they do is `console.log` `"a"`, `"b"`, and `"c"`, respectively.
+
+## Usage
+
+```javascript
+import {
+  a,
+  b,
+  c,
+} from '@jaebradley/example-rollup-library';
+
+a(); // console logs "a"
+b(); // console logs "b"
+c(); // you bet
+```
+
+Can also import like
+
+```javascript
+import a from '@jaebradley/example-rollup-library/a';
+import b from '@jaebradley/example-rollup-library/b';
+import c from '@jaebradley/example-rollup-library/c';
+
+a();
+b();
+c();
+```
+
