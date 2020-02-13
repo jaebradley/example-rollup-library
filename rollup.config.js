@@ -1,6 +1,6 @@
 import babel from 'rollup-plugin-babel';
-import commonjs from 'rollup-plugin-commonjs';
-import resolve from 'rollup-plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
 import localResolve from 'rollup-plugin-local-resolve';
 import filesize from 'rollup-plugin-filesize';
 import globals from 'rollup-plugin-node-globals';
@@ -27,7 +27,7 @@ const plugins = [
   filesize(),
 ];
 
-const createConfig = filename => ({
+const createConfig = (filename) => ({
   input: `src/${filename}.js`,
   output: [
     {
@@ -53,6 +53,6 @@ const configs = [
   'a',
   'b',
   'c',
-].map(filename => createConfig(filename));
+].map((filename) => createConfig(filename));
 
 export default configs;
