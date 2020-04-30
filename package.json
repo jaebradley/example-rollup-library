@@ -59,7 +59,7 @@
     "jest": "^25.1.0",
     "rollup": "^2.0.0",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-filesize": "^6.2.1",
+    "rollup-plugin-filesize": "^8.0.0",
     "rollup-plugin-local-resolve": "^1.0.7",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.4.0",
