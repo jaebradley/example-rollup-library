@@ -46,7 +46,7 @@
     "@commitlint/prompt": "^8.3.5",
     "@commitlint/prompt-cli": "^8.3.5",
     "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-node-resolve": "^8.0.0",
     "ajv": "^6.11.0",
     "babel-jest": "25.1.0",
     "bufferutil": "^4.0.1",
